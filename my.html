@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY Project</title>
+  <link rel="stylesheet" href="my.css">
+</head>
+
+<body>
+
+
+
+  <body>
+
+   <nav class="navbar">
+      <div class="nav-container">
+        <img src="image.png" alt="Logo" width="100px" height="70px">
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#feed-section">Explore</a>
+          <button class="btn btn-success" id="btn-open-model">Add Idea</button>
+        </div>
+      </div>
+    </nav>
+
+
+    <header class="hero" id="hero">
+      <div class="hero-content">
+        <h1>Turn Your Ideas Into Reality</h1>
+        <p>Share your project concepts, get feedback from peers, and collaborate to build something amazing.</p>
+        <button class="btn btn-success btn-lg" id="hero-cta">Get Started</button>
+      </div>
+    </header>
+
+
+
+    <main class="main-container" id="feed-section">
+      <h2 class="section-title">Explore Student Ideas</h2>
+
+      <div id="loader" class="loader-container" style="text-align: center; padding: 2rem;">
+        <p>Loading inspiration...</p>
+      </div>
+
+      <div id="ideas-feed" class="ideas-grid hidden">
+      </div>
+    </main>
+
+
+
+    <div id="form-modal" class="modal-overlay hidden">
+      <div class="modal-card">
+        <h3 style="margin-bottom: 1.5rem;" id="modal-title">Share a New Idea</h3>
+        <form id="idea-form" novalidate>
+          <input type="hidden" id="idea-id">
+          <div style="margin-bottom: 1rem;">
+            <label style="font-weight:600;">Idea Title *</label>
+            <input type="text" id="idea-title"
+              style="width:100%; padding:0.5rem; margin-top:0.3rem; border-radius:6px; border:1px solid #CCC;">
+          </div>
+         
+         
+          <div style="margin-bottom: 1rem;">
+            <label style="font-weight:600;">Description *</label>
+            <textarea id="idea-description" rows="4"
+              style="width:100%; padding:0.5rem; margin-top:0.3rem; border-radius:6px; border:1px solid #CCC;"></textarea>
+          </div>
+         
+         
+          <div style="margin-bottom: 1rem;">
+            <label style="font-weight:600;">Tags (comma-separated)</label>
+            <input type="text" id="idea-tags" placeholder="e.g. Web, AI"
+              style="width:100%; padding:0.5rem; margin-top:0.3rem; border-radius:6px; border:1px solid #CCC;">
+          </div>
+          
+          
+          <div style="margin-bottom: 1.5rem;">
+            <label style="font-weight:600;">Category</label>
+            <select id="idea-category"
+              style="width:100%; padding:0.5rem; margin-top:0.3rem; border-radius:6px; border:1px solid #CCC;">
+              <option value="Development">Development</option>
+              <option value="Design">Design</option>
+              <option value="Research">Research</option>
+            </select>
+          </div>
+          
+          
+          <div style="display:flex; justify-content: flex-end; gap: 1rem;">
+            <button type="button" class="btn btn-grey" id="btn-close-modal">Cancel</button>
+            <button type="submit" class="btn btn-success" id="btn-submit">Publish Idea</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2026 IdeaSpark Platform. Made for Students.</p>
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy</a>
+      </div>
+    </footer>
+
+    <script src="my.js"></script>
+  </body>
+
+</html>
